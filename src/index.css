@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font declarations */
+.font-display {
+  font-family: 'Oswald', sans-serif;
+}
+
+.font-body {
+  font-family: 'Bitter', serif;
+}
+
+/* Custom scrollbar for the forestry theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a34;
+  border: 2px solid #1a1a18;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a7c43;
+}
+
+/* Date input styling for dark theme */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.7) sepia(0.3) hue-rotate(60deg);
+  cursor: pointer;
+}
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Select dropdown styling */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238b9a7d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: #2d5a27;
+  color: #c5e063;
+}
+
+/* Focus states */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #4a7c43;
+  outline-offset: 2px;
+}
+
+/* Subtle animation for hover states */
+@keyframes pulse-green {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(45, 90, 39, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(45, 90, 39, 0);
+  }
+}
+
+/* Mobile touch improvements */
+@media (hover: none) {
+  button:active {
+    transform: scale(0.98);
+  }
+}
